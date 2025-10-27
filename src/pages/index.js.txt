@@ -1,0 +1,26 @@
+// src/pages/index.js
+import React, { useState } from 'react';
+import WalletConnect from '../components/WalletConnect';
+import GameBoard from '../components/GameBoard';
+import Leaderboard from '../components/Leaderboard';
+import HalloweenEffects from '../components/HalloweenEffects';
+
+const Home = () => {
+  const [account, setAccount] = useState(null);
+  const [contract, setContract] = useState(null);
+
+  return (
+    <div className="home" style={{ backgroundImage: 'url(/assets/spooky-bg.jpg)', minHeight: '100vh', color: '#fff' }}>
+      <HalloweenEffects />
+      <WalletConnect setAccount={setAccount} setContract={setContract} />
+      {account && contract && (
+        <>
+          <GameBoard account={account} contract={contract} />
+          <Leaderboard contract={contract} />
+        </>
+      )}
+    </div>
+  );
+};
+
+export default Home;

@@ -1,0 +1,36 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Creepster', cursive;
+  background-color: #111;
+  color: #fff;
+}
+
+.app {
+  text-align: center;
+}
+
+.home {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+/* Button hover effects for spooky vibe */
+button:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Grid cell hover effect */
+.game-board div:hover {
+  background-color: #555;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Leaderboard table styling */
+table {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
